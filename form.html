@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 실습과제</title>
+    <style>
+        .section {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #motive {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <h1>프론트엔드 개발자 지원서</h1>
+    <p>
+        HTML, CSS, JAVASCRIPT에 대한 기술적 이해와 많은 경험이 있는 분을 찾습니다.
+    </p>
+    <hr>
+    <form name="apply" action="null" method="post">
+        <fieldset>
+            <legend>입사지원서</legend>
+            <p class="section">개인정보</p>
+            <ul>
+                <li>
+                    <label for="name">이름</label>
+                    <input type="text" id="name" name="username" size="15">
+                </li>
+                <li>
+                    <label for="number">연락처</label>
+                    <input type="text" id="number" name="usernumber"  size="15">
+                </li>
+                <li>
+                    <label for="major">학과</label>
+                    <select name="major" id="major">
+                        <optgroup label="공과대학">
+                            <option value="컴퓨터공학과" selected>컴퓨터공학과</option>
+                            <option value="전자공학과">전자공학과</option>
+                        </optgroup>
+                        <optgroup label="경상대학">
+                            <option value="경영학과">경영학과</option>
+                            <option value="관광경영학과">관광경영학과</option>
+                            <option value="회계학과">회계학과</option>
+                        </optgroup>
+                    </select>
+                </li>
+            </ul>
+            <p class="section">지원 분야</p>
+            <ul>
+                <li>
+                    <input type="radio" id="publishing" name="area" value="publishing">
+                    <label for="publishing">웹 퍼블리싱</label>
+                </li>
+                <li>
+                    <input type="radio" id="application" name="area" value="application">
+                    <label for="application">웹 어플리케이션</label>
+                </li>
+                <li>
+                    <input type="radio" id="dev-support" name="area" value="dev-support">
+                    <label for="dev-support">웹 개발 지원</label>
+                </li>
+            </ul>
+            <p class="section">지원 동기</p>
+            <textarea rows="10" cols="60" id="motive" placeholder="지원동기를 작성해주세요."></textarea>
+            <input type="submit" value="접수하기">
+            <input type="reset" value="다시작성">
+        </fieldset>
+
+    </form>
+</div>
+</body>
+</html>
